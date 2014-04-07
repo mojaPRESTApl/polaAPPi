@@ -1,0 +1,132 @@
+##			DANE PROJEKTU			##
+projekt: DevPOLA_app
+wersja: 1.0
+autor: Adrian Rys(mojaPRESTA.pl)
+data_utworzenia_projektu: 05.04.2014
+template_name: backend
+dev_email: adrian.rys@o2.pl
+dev_www: www.mojapresta.pl
+dev_logo: mojapresta.pl/public/themes/front2/img/logo.png
+## 		KONFIGURACJA POZIOMOW APLIKACJI ##
+project_app_levels:
+	front_end:
+		id: 1
+		name: front_end
+		output_format: all
+		templates: frontend
+		error_log: 1
+		error_log_file: error_for_level-frontend.log
+	back_end:
+		id: 2
+		name: back_end
+		output_format: all
+		templates: backend
+		error_log: 1
+		error_log_file: error_for_level-backend.log
+	api:
+		id: 3
+		name: api
+		output_format: xml&json&soap
+		error_log: 1
+		error_log_file: error_for_level-api.log
+##			OBSLUGA BLEDOW PHP					##
+dev_error_logs: 
+	error_raporting: E_ALL & ~(E_STRICT|E_NOTICE|E_WARNING)
+	error_reporting: error.log
+##			DERYKTYWY PHP DLA ini_set(key,val)	##
+ini_set:	
+	error_reporting: E_ALL
+	display_errors: 1
+	error_log: data/error.log
+## 			STRUKTURA KATALOGOW					##
+dir:
+	app: app
+	data: data
+	class: app/class
+	controllers: app/controllers
+	models: app/models
+	public: public
+	assets: &dane_public_assets
+		css: public/themes/css/
+		js: public/themes/js/
+		img: public/themes/img/
+	cache_dir: data/cache
+	templates_cache: data/templates_c
+##			LADOWANIE KLAS APLIKACJI			##
+app_class:
+	iController: iController.class.php
+	Db: Db.class.php
+	PolaRouter: Router.class.php
+	Modules: Modules.class.php
+	Smarty: smarty/Smarty.class.php
+##			DANE DLA POLACZENIA Z MYSQL			##
+db:
+	driver: mysql
+	host: localhost
+	user: redzone_devPOLA
+	pass: 
+	nameDb: redzone_devPOLA
+	charset: UTF-8
+##			KONTROLERY APLIKACJI 				##
+controllers:
+	1:indexController.php
+	2:ajaxController.php
+	3:testController.php
+##			LISTA AKCJI SYSSTEMOWYCH			##
+actions:
+	act_1: &act1
+		id: 1
+		controller: 1
+		func_name: indexStart
+		tpl: home_index.tpl
+	act_2: &act2
+		id: 2
+		controller: 2
+		func_name: catIndexStart
+		tpl: _cat_index.tpl
+	act_3: &act3
+		id: 3
+		controller: 2
+		func_name: ajaxStart
+		tpl: ajax_index.tpl
+		show_tpl: none
+		format_output: json
+##				MAPOWANIE ROUTEROW URL			##
+url_routing:
+	##	POZIOM APLIKACJI: FRONT_END		##
+	front_end:
+		_SL_: 
+			<<: *act1
+		index: 
+			<<: *act1
+		home: 
+			<<: *act1
+		kategoria/[[idk]]: 
+			<<: *act2
+		"ajax/[[func_name]]":
+			<<: *act3
+	
+	##	POZIOM APLIKACJI: BACK_END		##
+	back_end:
+			_SL_: 
+				<<: *act1
+			index: 
+				<<: *act1
+			home: 
+				<<: *act1
+			kategoria/[[idk]]: 
+				<<: *act2
+			"ajax/[[func_name]]":
+				<<: *act3
+	##	POZIOM APLIKACJI: API		##
+	api:
+			_SL_: 
+				<<: *act1
+			index: 
+				<<: *act1
+			home: 
+				<<: *act1
+			kategoria/[[idk]]: 
+				<<: *act2
+			"ajax/[[func_name]]":
+				<<: *act3

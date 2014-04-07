@@ -1,0 +1,146 @@
+[{
+		"url":"panel/zlecenia",
+		"name":"Zlecenia",
+		"active":"1",
+		"id":"",
+		"class":""
+	},{
+		"url":"panel/strony-cms",
+		"name":"Strony CMS",
+		"active":"1",
+		"id":"",
+		"class":""
+	},
+	{
+		"url":"klienci",
+		"name":"Lista klientów",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"wyceny",
+		"name":"Wyceny zadań",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"panel/zadania",
+		"name":"Zadania",
+		"active":"1",
+		"id":"",
+		"class":""
+	},{
+		"url":"system",
+		"name":"System",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"projekty",
+		"name":"Projekty",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"dysk",
+		"name":"Dysk sieciowy",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"pracownicy",
+		"name":"Pracownicy",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"godziny-pracy",
+		"name":"Godziny pracy",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"backend/produkty",
+		"name":"Produkty w sklepie",
+		"active":"1",
+		"id":"",
+		"class":""
+	},{
+		"url":"backend/menu",
+		"name":"Elementy Menu",
+		"active":"1",
+		"id":"",
+		"class":""
+	},{
+		"url":"magazyn",
+		"name":"Magazyn",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"api",
+		"name":"API systemu",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"prestashop/moduly",
+		"name":"Moduły Prestashop",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"prestashop/instalator",
+		"name":"Instalator Prestashop",
+		"active":"1",
+		"id":"",
+		"class":""
+	},{
+		"url":"prestashop/zabezpieczenie-projektu",
+		"name":"Zabezpieczenie projektu",
+		"active":"1",
+		"id":"",
+		"class":""
+	},{
+		"url":"prestashop/lista-sklepow",
+		"name":"Zarządzaj sklepami",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"cloud",
+		"name":"Chmura danych",
+		"active":"0",
+		"id":"",
+		"class":""
+	},{
+		"url":"system/setup",
+		"name":"SystemAPP",
+		"active":"0",
+		"id":"",
+		"class":"",
+		"icon":"webA_1.png"
+	},{
+		"url":"panel_crm",
+		"name":"Zamówienia",
+		"active":"0",
+		"id":"",
+		"class":"",
+		"icon":"webA_11.png"
+	},{
+		"url":"panel_crm/klienci",
+		"name":"Klienci",
+		"active":"0",
+		"id":"",
+		"class":"",
+		"icon":"webA_14.png"
+	},
+	{
+		"url":"panel_crm/produkty",
+		"name":"Produkty",
+		"active":"",
+		"id":"",
+		"class":"",
+		"icon":"webA_18.png"
+	}
+]

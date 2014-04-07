@@ -1,0 +1,15 @@
+<?php
+class iController{
+	public function __construct(){
+		$this->__set('Main',Main::GetInst());
+		$this->__set('Db',$this->Main->Db);
+	}
+	public function __get($nazwa) {
+		return $this->$nazwa;
+	}
+	public function __set($nazwa, $wartosc) {
+		$this->$nazwa = $wartosc;
+	}
+
+
+}

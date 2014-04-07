@@ -1,0 +1,53 @@
+________________________________________________________________________
+------------------------------------------------------------------------
+---------------WALIDACJA ELEMENTÓW FORMULARZA---------------------------
+------------------------------------------------------------------------
+-----URL DOKUMENTACJI : http://formvalidator.net/#default-validators----
+________________________________________________________________________
+- GŁÓWNY PARAMETR: "vali"	[w smarty VL]
+- MINIMALNA ILOŚĆ ZNAKÓW: "vali"="ile" , 
+	PARAMETRY : 
+		- vali-ile="min6"
+		- vali-ile="max10"
+		- vali-ile="5-100"
+		
+- CYFRA: "vali"="number" , 
+	PARAMETRY : 
+		-vali-typ="float"
+		-vali-allowing="float,negative"
+		-vali-decimal-separator=","
+		-vali-decimal-separator="range[1;100]"
+		-vali-decimal-separator="range[-50;30],negative"
+		-vali-decimal-separator="range[0.05;0.5],float"
+
+- ADRES EMAIL : "vali"="email"
+- ADRES URL   : "vali"="url"
+- DATA vali="date" 
+	PARAMETRY:
+		-vali-format="dd/mm/yyyy"
+		
+		
+- POWIĄZANIE PÓL HASŁA : vali="haslo" + vali="rehaslo"
+	PARAMETRY:
+		-vali-haslo="1/2/3/4" - poziom
+- ZBIÓR TYPÓW DANYCH / ZNAKÓW : vali="zbior"
+	PARAMETRY:
+		-vali
+============================================================================
+Zmiany :
+decimal-separator 	=> 		sep
+vali-allowing 		=>     	vali-typ
+vali-length 		=> 		vali-ile
+============================================================================
+============================================================================
+W SMARTACH ZMIENIŁEM:
+vali 		=> va
+name		=> n
+value		=> v
+class		=> c
+id			=> i
+type		=> t
+placeholder => p
+
+PARAMETR PUSZCZAJĄCY ZMIANĘ " -v- / -V- / V- / v-" 		na 		" vali- " == VI=1 / vi=1
+
